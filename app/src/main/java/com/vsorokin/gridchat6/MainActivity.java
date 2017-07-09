@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        new LocalServer().start();
+        new LocalClient().start();
+
         button = (Button) findViewById(R.id.button);
         message = (EditText) findViewById(R.id.message);
         messages = (TextView) findViewById(R.id.Messages);
@@ -31,9 +34,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+}
 
-    protected void sendMessage(View view) {
-        String text = message.getEditableText().toString();
-        messages.setText(text);
-    }
+class LocalServer {
+    void start(){}
+}
+
+class LocalClient {
+    void start(){}
 }
