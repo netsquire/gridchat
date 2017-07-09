@@ -19,20 +19,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button =  (Button)  findViewById(R.id.button);
-        message =  (EditText)  findViewById(R.id.message);
-        messages =  (TextView)  findViewById(R.id.Messages);
+        button = (Button) findViewById(R.id.button);
+        message = (EditText) findViewById(R.id.message);
+        messages = (TextView) findViewById(R.id.Messages);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                message.getEditableText();
-                messages.setText(message.getEditableText());
+                String text = messages.getText().toString();
+                messages.setText(text + "\r\n" + message.getEditableText());
             }
         });
     }
 
-    protected void sendMessage(View view){
+    protected void sendMessage(View view) {
         String text = message.getEditableText().toString();
         messages.setText(text);
     }

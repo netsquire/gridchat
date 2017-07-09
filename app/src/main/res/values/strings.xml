@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GridChat6</string>
+    <string name="listOfMessages">List of messages</string>
 </resources>
